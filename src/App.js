@@ -13,12 +13,10 @@ const App = () => {
     axios
       .get('https://coronavirus-19-api.herokuapp.com/countries/pakistan')
       .then(res => {
-        console.log(res.data);
         setStats(res.data);
         setLoading(false);
       })
       .catch(err => {
-        console.error(err);
         setLoading(false);
       });
     // eslint-disable-next-line
