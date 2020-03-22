@@ -13,7 +13,6 @@ const App = () => {
     axios
       .get('https://coronavirus-19-api.herokuapp.com/countries/pakistan')
       .then(res => {
-        console.log(res.data);
         setStats(res.data);
         setLoading(false);
       })
