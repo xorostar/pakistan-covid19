@@ -13,6 +13,7 @@ const App = () => {
     axios
       .get('https://coronavirus-19-api.herokuapp.com/countries/pakistan')
       .then(res => {
+        console.log(res.data);
         setStats(res.data);
         setLoading(false);
       })
@@ -65,26 +66,26 @@ const App = () => {
           </div>
           <div className='stat bg-black'>
             <h2 className='stat-label'>Deaths</h2>
-            <h3 className='stat-count'>3</h3>
+            <h3 className='stat-count'>{stats.deaths}</h3>
           </div>
           <div className='stat bg-grey'>
             <h2 className='stat-label'>
               Cases <br /> (24 HRS)
             </h2>
-            <h3 className='stat-count'>165</h3>
+            <h3 className='stat-count'>{stats.todayCases}</h3>
           </div>
           <div className='stat bg-black'>
             <h2 className='stat-label'>
               Deaths <br />
               (24 HRS)
             </h2>
-            <h3 className='stat-count'>3</h3>
+            <h3 className='stat-count'>{stats.todayDeaths}</h3>
           </div>
           <div className='stat bg-grey'>
             <h2 className='stat-label'>
               Cases Per <br /> Million
             </h2>
-            <h3 className='stat-count'>13</h3>
+            <h3 className='stat-count'>{stats.casesPerOneMillion}</h3>
           </div>
         </div>
       </main>
