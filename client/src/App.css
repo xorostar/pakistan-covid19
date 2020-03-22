@@ -177,6 +177,10 @@ main .stats .main-stat {
   .stat .stat-label {
     font-size: 30px !important;
   }
+
+  header nav a {
+    font-size: 14px;
+  }
 }
 
 .stat .stat-label {
