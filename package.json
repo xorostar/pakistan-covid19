@@ -1,6 +1,6 @@
 {
   "name": "pakistan-covid19",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Live COVID 19 updates for Pakistan",
   "main": "server.js",
   "scripts": {
@@ -25,7 +25,6 @@
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "moment": "^2.24.0",
-    "morgan": "^1.10.0",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {

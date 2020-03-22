@@ -1,21 +1,6 @@
 const path = require('path');
-const logger = require('morgan');
 const express = require('express');
 const app = express();
-
-// Initialize Middleware
-if (process.env.NODE_ENV == 'production') {
-  // Create a write stream for morgan logging (in append mode)
-  var accessLogStream = fs.createWriteStream(
-    path.join(__dirname, 'access.log'),
-    {
-      flags: 'a'
-    }
-  );
-  app.use(logger('combined', { stream: accessLogStream }));
-} else {
-  app.use(logger('dev'));
-}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
