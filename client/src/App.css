@@ -146,8 +146,8 @@ main .stats .main-stat {
   }
 
   .d-flex * {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -182,7 +182,12 @@ main .stats .main-stat {
     font-size: 14px;
   }
 }
-
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 1.4em;
+    text-align: left;
+  }
+}
 .stat .stat-label {
   align-self: flex-start;
   margin: 0;

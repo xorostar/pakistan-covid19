@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <React.Fragment>
       <div className='about-header'>
-        <h1>About This App</h1>
+        <h3>About This App</h3>
         <p>
           <strong>Version: </strong> 2.0.0
         </p>
@@ -37,12 +37,20 @@ const AboutPage = () => {
           </p>
           <ul className='sources'>
             <li>
-              <a href='https://www.worldometers.info' target='_blank'>
+              <a
+                href='https://www.worldometers.info'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 WordOMeters: www.worldometers.info
               </a>
             </li>
             <li>
-              <a href='https://www.worldometers.info' target='_blank'>
+              <a
+                href='https://www.worldometers.info'
+                rel='noopener noreferrer'
+                target='_blank'
+              >
                 JHU Data: 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data
                 Repository by Johns Hopkins CSSE
               </a>

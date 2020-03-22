@@ -13,7 +13,7 @@ const Header = () => {
             style={{ marginRight: '10px' }}
             alt=''
           />
-          PAKISTAN COVID 19
+          <span>PAKISTAN COVID 19</span>
         </h1>
       </div>
       <div className='right'>
