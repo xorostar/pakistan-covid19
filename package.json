@@ -22,7 +22,11 @@
   },
   "homepage": "https://github.com/aswaddev/pakistan-covid19#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.10.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
