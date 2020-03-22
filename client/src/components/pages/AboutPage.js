@@ -47,7 +47,7 @@ const AboutPage = () => {
             </li>
             <li>
               <a
-                href='https://www.worldometers.info'
+                href='https://github.com/CSSEGISandData/COVID-19'
                 rel='noopener noreferrer'
                 target='_blank'
               >
