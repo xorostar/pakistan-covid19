@@ -32,10 +32,25 @@ html {
 }
 
 body {
-  background: #00081e;
+  background: #fff;
   max-width: 1300px;
   margin: auto;
   padding: 0 10px;
+}
+
+p {
+  text-transform: none !important;
+  font-weight: normal !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+body.loading {
+  background: #00081e !important;
+}
+
+body.loading header,
+body.loading footer {
+  display: none;
 }
 
 body * {
@@ -48,6 +63,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+header nav a.active {
+  font-weight: bold;
 }
 
 header h1 {
@@ -64,6 +100,13 @@ main .stats {
   gap: 20px;
 }
 
+main .jhu-stats.stats {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
 main .stats .stat {
   display: flex;
   flex-direction: column;
@@ -71,10 +114,24 @@ main .stats .stat {
   padding: 20px;
 }
 
+.stat.stat-horizontal {
+  grid-column: span 2;
+}
+
 main .stats .main-stat {
   grid-row: span 2;
 }
+
 @media screen and (max-width: 1000px) {
+  header nav {
+    margin-top: 0px;
+    justify-content: center;
+  }
+
+  main .jhu-stats.stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   main .stats .stat {
     grid-column: span 2;
     grid-row: span 1;
@@ -82,6 +139,15 @@ main .stats .main-stat {
 
   .stat .stat-label {
     font-size: 30px !important;
+  }
+
+  .d-flex.about {
+    flex-direction: column;
+  }
+
+  .d-flex * {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -98,6 +164,7 @@ main .stats .main-stat {
   }
 
   header h1 {
+    font-size: 2em;
     margin-top: 0;
     text-align: center !important;
   }
@@ -159,4 +226,46 @@ footer {
 
 footer a {
   color: #000;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-flex > * {
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+.d-flex .left {
+  flex: 1;
+  margin-left: 0;
+}
+
+.d-flex .right {
+  flex: 1;
+  margin-right: 0;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p a {
+  text-transform: none;
+  font-size: 16px !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+ul.sources li a {
+  text-transform: none;
+  font-size: 15px !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
