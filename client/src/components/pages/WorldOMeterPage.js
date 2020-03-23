@@ -27,7 +27,7 @@ const WorldOMeterPage = () => {
   }
 
   return (
-    <main>
+    <main className='world-o-meter-page'>
       <div className='stats'>
         <div className='bg-reddish-pink main-stat stat'>
           <h2 className='stat-label'>Confirmed Cases</h2>

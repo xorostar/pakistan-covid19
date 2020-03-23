@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 import axios from 'axios';
 import Loader from '../layouts/Loader';
 
@@ -27,7 +28,12 @@ const JHUPage = () => {
   }
 
   return (
-    <main>
+    <main className='jhu-page'>
+      <small className='last-update'>
+        <strong>Last Updated:</strong>{' '}
+        {moment(new Date(stats.last_update)).format('MMMM Do YYYY, h:mm:ss a')}{' '}
+        (UTC)
+      </small>
       <div className='stats jhu-stats'>
         <div className='bg-reddish-pink main-stat stat'>
           <h2 className='stat-label'>Confirmed Cases</h2>

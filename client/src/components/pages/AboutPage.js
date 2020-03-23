@@ -3,7 +3,7 @@ import coronavirus from '../../images/coronavirus.gif';
 
 const AboutPage = () => {
   return (
-    <React.Fragment>
+    <main>
       <div className='about-header'>
         <h3>About This App</h3>
         <p>
@@ -72,7 +72,7 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-    </React.Fragment>
+    </main>
   );
 };
 

@@ -122,10 +122,22 @@ main .stats .main-stat {
   grid-row: span 2;
 }
 
+main.jhu-page small.last-update {
+  display: block;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 @media screen and (max-width: 1000px) {
   header nav {
     margin-top: 0px;
     justify-content: center;
+  }
+
+  main.jhu-page small.last-update {
+    display: block;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    text-align: center;
   }
 
   main .jhu-stats.stats {
