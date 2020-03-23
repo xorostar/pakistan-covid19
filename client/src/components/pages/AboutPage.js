@@ -11,7 +11,7 @@ const AboutPage = () => {
         </p>
       </div>
       <div className='d-flex about'>
-        <div className='left'>
+        <div className='left' style={{overflow: 'hidden', marginBottom:"10px"}}>
           <img
             style={{ marginBottom: '15px' }}
             src={coronavirus}
@@ -32,8 +32,8 @@ const AboutPage = () => {
             </a>{' '}
           </p>
           <p>
-            This app has relies on 2 different sources of data. These are as
-            follows:
+            This app relies on Novel Coronavirus (COVID-19) data provided by the
+            following data sources:
           </p>
           <ul className='sources'>
             <li>
@@ -42,7 +42,7 @@ const AboutPage = () => {
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                WordOMeters: www.worldometers.info
+                WordOMeters: www.worldometers.info (API by JavieraViles)
               </a>
             </li>
             <li>
@@ -57,18 +57,19 @@ const AboutPage = () => {
             </li>
           </ul>
           <p>
-            All data is updated automatically. A big thanks to NovelCovid for
-            providing JHU Data Repo and JavieraViles for WorldOMeter API. A big
-            shoutout to them.
+            All data is updated automatically. A big thanks to {` `}
+            <a href='https://github.com/javieraviles/covidAPI' target='_blank'>
+              CSSEGISandData
+            </a>{' '}
+            for providing data collected by John Hopkins University (JHU) and{' '}
+            {` `}
+            <a href='https://github.com/javieraviles/covidAPI' target='_blank'>
+              JavieraViles
+            </a>{' '}
+            {` `}
+            for WorldOMeter API. A big shoutout to them.
           </p>
-          <p>
-            I am planning to make the app open source very soon so anyone is
-            welcome to contribute. The tech stack used for the application was
-            Node JS, Express &amp; React.{' '}
-          </p>
-          <p>
-            #corona #COVID2019 #covid19 #coronavirus #coronaapps #covid19apps
-            #COVID19Pakistan #Coronavirus #Pakistan{' '}
+          <p><strong>Disclaimer:</strong> <br/> This website relies upon publicly available data from multiple sources, that do not always agree. We hereby disclaim any and all representations and warranties with respect to the Website, including accuracy, fitness for use, and merchantability.
           </p>
         </div>
       </div>
