@@ -135,10 +135,14 @@ main.jhu-page small.last-update {
 
   main.jhu-page small.last-update {
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: 'Open Sans', sans-serif !important;
     font-size: 12px;
-    text-align: center;
+  }
+
+  main.jhu-page small.last-update strong {
+    display: block;
+    margin-bottom: 5px;
   }
 
   main .jhu-stats.stats {
