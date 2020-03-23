@@ -16,6 +16,7 @@ const App = () => {
           <Route exact path='/' component={WorldOMeterPage} />
           <Route exact path='/jhu-data' component={JHUPage} />
           <Route exact path='/about' component={AboutPage} />
+          <Route path='*' component={WorldOMeterPage} />
         </Switch>
         <Footer />
       </Router>
