@@ -11,7 +11,10 @@ const AboutPage = () => {
         </p>
       </div>
       <div className='d-flex about'>
-        <div className='left' style={{overflow: 'hidden', marginBottom:"10px"}}>
+        <div
+          className='left'
+          style={{ overflow: 'hidden', marginBottom: '10px' }}
+        >
           <img
             style={{ marginBottom: '15px' }}
             src={coronavirus}
@@ -58,18 +61,31 @@ const AboutPage = () => {
           </ul>
           <p>
             All data is updated automatically. A big thanks to {` `}
-            <a href='https://github.com/javieraviles/covidAPI' target='_blank'>
+            <a
+              href='https://github.com/javieraviles/covidAPI'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               CSSEGISandData
             </a>{' '}
             for providing data collected by John Hopkins University (JHU) and{' '}
             {` `}
-            <a href='https://github.com/javieraviles/covidAPI' target='_blank'>
+            <a
+              href='https://github.com/javieraviles/covidAPI'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
               JavieraViles
             </a>{' '}
             {` `}
             for WorldOMeter API. A big shoutout to them.
           </p>
-          <p><strong>Disclaimer:</strong> <br/> This website relies upon publicly available data from multiple sources, that do not always agree. We hereby disclaim any and all representations and warranties with respect to the Website, including accuracy, fitness for use, and merchantability.
+          <p>
+            <strong>Disclaimer:</strong> <br /> This website relies upon
+            publicly available data from multiple sources, that do not always
+            agree. We hereby disclaim any and all representations and warranties
+            with respect to the Website, including accuracy, fitness for use,
+            and merchantability.
           </p>
         </div>
       </div>

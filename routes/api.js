@@ -72,12 +72,17 @@ router.get('/jhu-stats', (req, res) => {
             res.send(countryData);
           })
           .catch(err => {
-            throw err;
+            console.error(err);
           });
       })
     )
-    .catch(errors => {
-      throw errors;
+    .catch(error => {
+      console.log(error.name + ': ' + error.message);
+      return res
+        .status(503)
+        .send(
+          "Due to a change in JHU's data repository, this page is currently down for maintenance. Sorry for any inconvenience, please try again in a few hours."
+        );
     });
 });
 

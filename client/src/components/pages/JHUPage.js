@@ -5,6 +5,7 @@ import Loader from '../layouts/Loader';
 
 const JHUPage = () => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
@@ -15,6 +16,9 @@ const JHUPage = () => {
         setLoading(false);
       })
       .catch(err => {
+        setError({
+          message: err.response.data
+        });
         setLoading(false);
       });
     // eslint-disable-next-line
@@ -25,6 +29,21 @@ const JHUPage = () => {
     return <Loader />;
   } else {
     document.body.classList.remove('loading');
+  }
+
+  if (error) {
+    return (
+      <h3
+        className='text-center'
+        style={{
+          width: '75%',
+          margin: 'auto',
+          marginTop: '30px'
+        }}
+      >
+        {error.message}
+      </h3>
+    );
   }
 
   return (
