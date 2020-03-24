@@ -12,6 +12,7 @@ const JHUPage = () => {
     axios
       .get('/api/jhu-stats')
       .then(res => {
+        console.log(res);
         setStats(res.data);
         setLoading(false);
       })
@@ -58,7 +59,7 @@ const JHUPage = () => {
           <h2 className='stat-label'>Confirmed Cases</h2>
           <h3 className='stat-count'>{stats.confirmed}</h3>
           <small style={{ textAlign: 'right', fontSize: '20px' }}>
-            {stats.activeCases} Active Cases
+            {stats.active} Active Cases
           </small>
         </div>
         <div className='stat stat-horizontal bg-green'>
