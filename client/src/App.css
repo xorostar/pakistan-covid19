@@ -23,7 +23,7 @@
 }
 
 .bg-grey {
-  background-color: #afacac;
+  background-color: #afadc6;
 }
 
 body,
@@ -32,10 +32,24 @@ html {
 }
 
 body {
-  background: #fff;
-  max-width: 1300px;
-  margin: auto;
+  background: #f6f6f6;
+  /* max-width: 1300px;
+  margin: auto; */
   padding: 0 10px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+main {
+  margin-top: 15px;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 p {
@@ -94,7 +108,7 @@ header h1 {
 }
 
 main .stats {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -123,87 +137,7 @@ main .stats .main-stat {
 }
 
 main.jhu-page small.last-update {
-  display: block;
   font-family: 'Open Sans', sans-serif !important;
-}
-
-@media screen and (max-width: 1000px) {
-  header nav {
-    margin-top: 0px;
-    justify-content: center;
-  }
-
-  main.jhu-page small.last-update {
-    display: block;
-    margin-top: 30px;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 12px;
-  }
-
-  main.jhu-page small.last-update strong {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  main .jhu-stats.stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  main .stats .stat {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-
-  .stat .stat-label {
-    font-size: 30px !important;
-  }
-
-  .d-flex.about {
-    flex-direction: column;
-  }
-
-  .d-flex * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header img {
-    margin: 20px 0;
-  }
-
-  header h1 {
-    font-size: 2em;
-    margin-top: 0;
-    text-align: center !important;
-  }
-
-  main .stats .stat {
-    grid-column: span 4;
-    grid-row: span 1;
-  }
-
-  .stat .stat-label {
-    font-size: 30px !important;
-  }
-
-  header nav a {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 500px) {
-  header h1 {
-    font-size: 1.4em;
-    text-align: left;
-  }
 }
 .stat .stat-label {
   align-self: flex-start;
@@ -211,6 +145,17 @@ main.jhu-page small.last-update {
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.stat .stat-label svg {
+  margin-top: 2px;
+}
+.stat .stat-label span {
+  margin-left: 10px;
 }
 
 .stat.main-stat .stat-label {
@@ -245,6 +190,7 @@ main.jhu-page small.last-update {
 }
 
 footer {
+  margin-top: 20px;
   font-weight: 700;
   padding: 25px 10px;
   text-align: center;
@@ -265,7 +211,6 @@ footer a {
 }
 
 .d-flex .left {
-  flex: 1;
   margin-left: 0;
 }
 
@@ -278,10 +223,15 @@ footer a {
   display: inline-block;
 }
 
-.about-header {
+.section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.section-header > * {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 p a {
@@ -306,4 +256,93 @@ ul.sources li a {
 
 .justify-content-center {
   justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav a {
+    padding: 5px;
+    margin-bottom: 7px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header nav {
+    margin-top: 0px;
+    justify-content: center;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .section-header small {
+    margin-top: 0;
+  }
+
+  main.jhu-page small.last-update {
+    display: block;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px;
+  }
+
+  main.jhu-page small.last-update strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  main .jhu-stats.stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  main .stats .stat {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .stat .stat-label {
+    font-size: 30px !important;
+  }
+
+  .d-flex.about {
+    flex-direction: column;
+  }
+
+  .d-flex * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header img {
+    margin: 20px 0;
+  }
+  header nav {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 30px;
+    margin-top: 0;
+    text-align: center !important;
+  }
+
+  main .stats .stat {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .stat .stat-label {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 25px;
+    text-align: left;
+  }
 }

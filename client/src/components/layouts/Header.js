@@ -24,6 +24,9 @@ const Header = () => {
           <NavLink exact to='/jhu-data'>
             JHU Data
           </NavLink>
+          <NavLink exact to='/prevention'>
+            Advice For Public
+          </NavLink>
           <NavLink exact to='/about'>
             About
           </NavLink>

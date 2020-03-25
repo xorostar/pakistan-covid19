@@ -4,19 +4,23 @@ import coronavirus from '../../images/coronavirus.gif';
 const AboutPage = () => {
   return (
     <main>
-      <div className='about-header'>
-        <h3>About This App</h3>
+      <div className='section-header'>
+        <h3>About This Web App</h3>
         <p>
-          <strong>Version: </strong> 2.0.0
+          <strong>Version: </strong> 2.2.0
         </p>
       </div>
       <div className='d-flex about'>
         <div
           className='left'
-          style={{ overflow: 'hidden', marginBottom: '10px' }}
+          style={{ overflow: 'hidden', marginBottom: '10px', minWidth: '30vw' }}
         >
           <img
-            style={{ marginBottom: '15px' }}
+            style={{
+              objectFit: 'cover',
+              marginBottom: '15px',
+              height: '100%'
+            }}
             src={coronavirus}
             alt=''
             width='100%'
@@ -25,19 +29,23 @@ const AboutPage = () => {
         <div className='right'>
           <h3 style={{ marginTop: '0px' }}>Pakistan Covid 19 Data</h3>
           <p>
-            Build with ❤ by {` `}
+            This web app was developed by{' '}
             <a
               href='https://www.aswadali.me'
               target='_blank'
               rel='noopener noreferrer'
             >
               Aswad Ali
-            </a>{' '}
+            </a>
+            , a student at University of South Asia, Lahore.{' '}
           </p>
           <p>
-            This app relies on Novel Coronavirus (COVID-19) data provided by the
-            following data sources:
+            The goal of this project is to present data in a simple, accurate
+            and timely way to raise awareness about the impact of COVID-19 in
+            Pakistan.
           </p>
+
+          <p>This app relies on data from the following sources:</p>
           <ul className='sources'>
             <li>
               <a
@@ -81,11 +89,15 @@ const AboutPage = () => {
             for WorldOMeter API. A big shoutout to them.
           </p>
           <p>
+            <p>
+              Comments, recommendations, and corrections are welcome. Please
+              reach out to{' '}
+              <a href='mailto:aswad@aswadali.me'>aswad@aswadali.me</a>
+            </p>
             <strong>Disclaimer:</strong> <br /> This website relies upon
             publicly available data from multiple sources, that do not always
             agree. We hereby disclaim any and all representations and warranties
-            with respect to the Website, including accuracy, fitness for use,
-            and merchantability.
+            with respect to the Website, including accuracy or fitness for use
           </p>
         </div>
       </div>

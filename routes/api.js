@@ -23,14 +23,18 @@ router.get('/jhu-stats', (req, res) => {
       axios.spread((...responses) => {
         confirmedData = parser
           .timeSeriesParser(responses[0].data)
-          .filter(
-            record => record.country.toLowerCase() === 'Pakistan'.toLowerCase()
-          )[0];
+          .filter(record => {
+            if (record.country) {
+              return record.country.toLowerCase() === 'Pakistan'.toLowerCase();
+            }
+          })[0];
         deathsData = parser
           .timeSeriesParser(responses[1].data)
-          .filter(
-            record => record.country.toLowerCase() === 'Pakistan'.toLowerCase()
-          )[0];
+          .filter(record => {
+            if (record.country) {
+              return record.country.toLowerCase() === 'Pakistan'.toLowerCase();
+            }
+          })[0];
         const latestDate = moment(
           new Date(deathsData.history[deathsData.history.length - 1].date)
         ).format('MM-DD-YYYY');
@@ -52,6 +56,16 @@ router.get('/jhu-stats', (req, res) => {
               deathsData.history[deathsData.history.length - 2].stat -
                 deathsData.history[deathsData.history.length - 1].stat
             );
+
+            countryData.fatalityRate = (
+              (countryData.deaths / countryData.confirmed) *
+              100
+            ).toPrecision(2);
+
+            countryData.recoveryRate = (
+              (countryData.recovered / countryData.confirmed) *
+              100
+            ).toPrecision(2);
 
             countryData.todayCases = Math.abs(
               confirmedData.history[confirmedData.history.length - 2].stat -
