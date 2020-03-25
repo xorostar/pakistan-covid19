@@ -101,10 +101,13 @@ header nav a.active {
 }
 
 header h1 {
-  display: flex;
-  align-items: center;
   font-size: 45px;
   font-weight: 900;
+}
+
+header h1 a {
+  display: flex;
+  align-items: center;
 }
 
 main .stats {
@@ -342,7 +345,11 @@ ul.sources li a {
 
 @media screen and (max-width: 500px) {
   header h1 {
-    font-size: 25px;
+    font-size: 21px;
     text-align: left;
+  }
+
+  header nav a {
+    font-size: 15px;
   }
 }

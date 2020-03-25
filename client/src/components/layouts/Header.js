@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import pakistanFlag from '../../images/pakistan-flag.jpg';
 
 const Header = () => {
@@ -7,13 +7,15 @@ const Header = () => {
     <header>
       <div className='left'>
         <h1>
-          <img
-            src={pakistanFlag}
-            width='75px'
-            style={{ marginRight: '10px' }}
-            alt=''
-          />
-          <span>PAKISTAN COVID 19</span>
+          <Link to='/' style={{ textDecoration: 'none' }}>
+            <img
+              src={pakistanFlag}
+              width='75px'
+              style={{ marginRight: '10px' }}
+              alt=''
+            />
+            <span>PAKISTAN COVID 19</span>
+          </Link>
         </h1>
       </div>
       <div className='right'>
