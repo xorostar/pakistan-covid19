@@ -53,7 +53,7 @@ const AboutPage = () => {
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                WordOMeters: www.worldometers.info (API by JavieraViles)
+                WorldOMeters: www.worldometers.info (API by JavieraViles)
               </a>
             </li>
             <li>

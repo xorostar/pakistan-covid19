@@ -43,7 +43,7 @@ const WorldOMeterPage = () => {
   return (
     <main className='world-o-meter-page'>
       <div className='section-header'>
-        <h3>Situation Updates from WordOMeters</h3>
+        <h3>Situation Updates from WorldOMeters</h3>
       </div>
       <div className='stats'>
         <div className='bg-reddish-pink main-stat stat'>
