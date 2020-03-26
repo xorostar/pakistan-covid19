@@ -19,7 +19,6 @@ const JHUPage = () => {
     axios
       .get('/api/jhu-stats')
       .then(res => {
-        console.log(res);
         setStats(res.data);
         setLoading(false);
       })
