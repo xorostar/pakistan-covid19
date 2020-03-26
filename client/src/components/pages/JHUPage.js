@@ -83,7 +83,7 @@ const JHUPage = () => {
           </h2>
           <h3 className='stat-count'>{stats.recovered}</h3>
           <small style={{ textAlign: 'right', fontSize: '20px' }}>
-            {stats.fatalityRate}% Recovery Rate
+            {stats.recoveryRate}% Recovery Rate
           </small>
         </div>
         <div className='stat stat-horizontal bg-black'>
