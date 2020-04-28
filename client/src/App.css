@@ -156,9 +156,7 @@ main.jhu-page small.last-update {
 
 .stat .stat-label svg {
   margin-top: 2px;
-}
-.stat .stat-label span {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .stat.main-stat .stat-label {
