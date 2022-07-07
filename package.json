@@ -27,7 +27,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "express": "^4.17.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
